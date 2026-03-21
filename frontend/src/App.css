@@ -1,34 +1,208 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* Global */
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+body {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #050B18;
+  color: #ffffff;
+  overflow-x: hidden;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif;
 }
 
-.App-link {
-    color: #61dafb;
+/* =================== NEURAL ORB ANIMATIONS =================== */
+.orbit-ring-1 {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: rotate-cw 14s linear infinite;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.orbit-ring-2 {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: rotate-ccw 20s linear infinite;
+}
+
+.orbit-ring-3 {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: rotate-cw 30s linear infinite;
+}
+
+.core-spin-cw {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: rotate-cw 8s linear infinite;
+}
+
+.core-spin-ccw {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: rotate-ccw 5s linear infinite;
+}
+
+.float-orb {
+  animation: float-orb 6s ease-in-out infinite;
+}
+
+.node-0 { animation: node-glow 2s ease-in-out infinite; }
+.node-1 { animation: node-glow 2.5s ease-in-out 0.4s infinite; }
+.node-2 { animation: node-glow 2.2s ease-in-out 0.8s infinite; }
+.node-3 { animation: node-glow 2.8s ease-in-out 1.2s infinite; }
+.node-4 { animation: node-glow 2s ease-in-out 0.6s infinite; }
+.node-5 { animation: node-glow 2.4s ease-in-out 1.0s infinite; }
+.node-6 { animation: node-glow 2.6s ease-in-out 0.2s infinite; }
+.node-7 { animation: node-glow 2.1s ease-in-out 1.4s infinite; }
+
+/* =================== KEYFRAMES =================== */
+@keyframes rotate-cw {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes rotate-ccw {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+@keyframes float-orb {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-18px); }
+}
+
+@keyframes node-glow {
+  0%, 100% { opacity: 0.5; r: 5; }
+  50% { opacity: 1; r: 8; }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3), 0 0 40px rgba(0, 212, 255, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.6), 0 0 60px rgba(0, 212, 255, 0.2);
+  }
+}
+
+@keyframes chatbot-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.5); }
+  70% { box-shadow: 0 0 0 14px rgba(0, 212, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(0, 212, 255, 0); }
+}
+
+@keyframes scan-line {
+  0% { transform: translateY(-100%); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(500%); opacity: 0; }
+}
+
+@keyframes badge-shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes data-flow {
+  0% { stroke-dashoffset: 200; opacity: 0; }
+  10% { opacity: 0.8; }
+  90% { opacity: 0.8; }
+  100% { stroke-dashoffset: 0; opacity: 0; }
+}
+
+/* =================== COMPONENT STYLES =================== */
+.chatbot-pulse {
+  animation: chatbot-pulse 2s ease-in-out infinite;
+}
+
+.hero-badge {
+  background: linear-gradient(90deg, 
+    rgba(0,212,255,0.15),
+    rgba(124,58,237,0.15),
+    rgba(0,212,255,0.15)
+  );
+  background-size: 200% auto;
+  animation: badge-shimmer 3s linear infinite;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+}
+
+.service-card {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(10, 22, 40, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(12px);
+}
+
+.service-card:hover {
+  border-color: rgba(0, 212, 255, 0.45);
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.12), 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.about-card {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(10, 22, 40, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(12px);
+}
+
+.about-card:hover {
+  border-color: rgba(124, 58, 237, 0.45);
+  box-shadow: 0 0 30px rgba(124, 58, 237, 0.12), 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #00D4FF, #7C3AED);
+  transition: opacity 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.4);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.btn-secondary:hover {
+  border-color: rgba(0, 212, 255, 0.6);
+  background: rgba(0, 212, 255, 0.07);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #050B18;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 212, 255, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 212, 255, 0.5);
+}
+
+/* Chat scrollbar */
+.chat-messages::-webkit-scrollbar {
+  width: 4px;
+}
+.chat-messages::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.15);
+  border-radius: 2px;
+}
+
+/* Section label */
+.section-label {
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: 3px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #00D4FF;
 }
