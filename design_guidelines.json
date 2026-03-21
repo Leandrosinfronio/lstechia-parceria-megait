@@ -1,0 +1,186 @@
+{
+  "brand_identity": {
+    "name": "LS Tech IA",
+    "mission": "Empowering Brazilian enterprises with premium AI automation and cybersecurity.",
+    "archetype": "Electric & Neon / Jewel & Luxury",
+    "tone": "Futuristic, Authoritative, Intelligent, Sophisticated, Trustworthy",
+    "target_audience": "Brazilian companies and entrepreneurs seeking high-end tech solutions"
+  },
+  "design_philosophy": {
+    "core_concept": "The Neural Glow",
+    "description": "A deep, immersive dark void illuminated by precise, intelligent strands of neon light. The design should feel like peering into a supercomputer's brain—dark, cool, and pulsing with data.",
+    "rules": [
+      "Dark Mode ONLY. No white backgrounds.",
+      "Glow is not decoration; it is hierarchy. Only important elements glow.",
+      "Glassmorphism must be 'Crystal' (high clarity, sharp edges), not 'Frosted' (muddy).",
+      "Motion should be fluid and 'heavy'—like liquid light, not bouncy.",
+      "Typography must be bold and geometric for headings."
+    ]
+  },
+  "typography": {
+    "font_family_primary": "Outfit, sans-serif",
+    "font_family_secondary": "DM Sans, sans-serif",
+    "google_fonts_url": "https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100..1000&family=Outfit:wght@100..900&display=swap",
+    "scale": {
+      "h1": "text-5xl md:text-7xl font-bold tracking-tight",
+      "h2": "text-4xl md:text-5xl font-semibold tracking-tight",
+      "h3": "text-2xl md:text-3xl font-medium",
+      "body": "text-base md:text-lg leading-relaxed text-gray-400"
+    }
+  },
+  "colors": {
+    "palette": {
+      "background": {
+        "main": "#050B18",
+        "secondary": "#0A1628",
+        "card": "rgba(10, 22, 40, 0.6)"
+      },
+      "primary": {
+        "main": "#00D4FF",
+        "glow": "rgba(0, 212, 255, 0.5)",
+        "gradient_start": "#00D4FF",
+        "gradient_end": "#7C3AED"
+      },
+      "secondary": {
+        "main": "#7C3AED",
+        "glow": "rgba(124, 58, 237, 0.5)"
+      },
+      "accent": {
+        "main": "#2563EB",
+        "neon_purple": "#D946EF"
+      },
+      "text": {
+        "primary": "#FFFFFF",
+        "secondary": "#94A3B8",
+        "muted": "#64748B"
+      },
+      "status": {
+        "success": "#10B981",
+        "warning": "#F59E0B",
+        "error": "#EF4444"
+      }
+    },
+    "gradients": {
+      "hero_text": "bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600",
+      "button_primary": "bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-500 hover:to-violet-500",
+      "card_border": "bg-gradient-to-b from-white/10 to-transparent",
+      "glow_overlay": "radial-gradient(circle at center, rgba(0, 212, 255, 0.15) 0%, transparent 70%)"
+    }
+  },
+  "visual_enhancers": {
+    "radius": {
+      "card": "rounded-2xl",
+      "button": "rounded-full"
+    },
+    "shadows": {
+      "neon_blue": "0 0 20px rgba(0, 212, 255, 0.3)",
+      "neon_purple": "0 0 20px rgba(124, 58, 237, 0.3)",
+      "glass": "0 8px 32px 0 rgba(0, 0, 0, 0.37)"
+    },
+    "borders": {
+      "glass": "1px solid rgba(255, 255, 255, 0.08)",
+      "active": "1px solid rgba(0, 212, 255, 0.5)"
+    },
+    "effects": {
+      "glassmorphism": "backdrop-blur-xl bg-black/40 border border-white/10",
+      "particles": "Canvas-based animated particles in background (blue/cyan nodes connected by lines)",
+      "tracing_beam": "Animated gradient border that travels around cards on hover"
+    }
+  },
+  "components": {
+    "Header": {
+      "path": "/app/frontend/src/components/layout/Header.js",
+      "style": "Fixed, glassmorphism, z-50. Logo left, Nav center, CTA right.",
+      "instructions": "Must become more opaque on scroll. Links should have a 'glow' hover effect (text shadow)."
+    },
+    "Hero": {
+      "path": "/app/frontend/src/components/sections/Hero.js",
+      "style": "Full height (min-h-screen). Center alignment. Big impact typography.",
+      "assets": {
+        "background_image": "https://images.unsplash.com/photo-1762279801245-5fecec30f099?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "overlay": "Dark gradient overlay to ensure text readability",
+        "particles": "true"
+      },
+      "content": "Badge: 'Nova Era da IA'. Headline: 'Inteligência Artificial que Redefine o Futuro'. CTA: 'Falar com Especialista'."
+    },
+    "Services": {
+      "path": "/app/frontend/src/components/sections/Services.js",
+      "style": "Grid layout (Bento grid style or 3-column).",
+      "card_style": "Dark glass cards. Hover: Border lights up in neon cyan. Icon glows.",
+      "items": [
+        "Automação Inteligente",
+        "Machine Learning",
+        "Cibersegurança IA",
+        "Consultoria de Dados",
+        "Chatbots Avançados",
+        "Infraestrutura Cloud"
+      ]
+    },
+    "About": {
+      "path": "/app/frontend/src/components/sections/About.js",
+      "style": "Asymmetric layout. Text left, futuristic visual right.",
+      "assets": {
+        "visual": "https://images.pexels.com/photos/7562087/pexels-photo-7562087.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+      }
+    },
+    "Contact": {
+      "path": "/app/frontend/src/components/sections/Contact.js",
+      "style": "Clean, focused. Two main buttons (WhatsApp, Email) with large hit areas.",
+      "background": "Subtle radial gradient from bottom."
+    },
+    "Footer": {
+      "path": "/app/frontend/src/components/layout/Footer.js",
+      "style": "Minimalist. Logo, Links, Copyright. Darker background #02040a."
+    },
+    "Chatbot": {
+      "path": "/app/frontend/src/components/features/Chatbot.js",
+      "style": "Floating button bottom-right. Pulsing glow effect. Expandable chat window.",
+      "color": "bg-cyan-500"
+    }
+  },
+  "layout_grid": {
+    "container": "max-w-7xl mx-auto px-6 md:px-12",
+    "section_spacing": "py-24 md:py-32",
+    "gap": "gap-8"
+  },
+  "motion": {
+    "library": "framer-motion",
+    "settings": {
+      "initial": { "opacity": 0, "y": 20 },
+      "animate": { "opacity": 1, "y": 0 },
+      "transition": { "duration": 0.6, "ease": "easeOut" }
+    },
+    "stagger": 0.1
+  },
+  "image_urls": {
+    "hero_bg": "https://images.unsplash.com/photo-1762279801245-5fecec30f099?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "about_tech": "https://images.pexels.com/photos/7562087/pexels-photo-7562087.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "security_icon": "https://images.pexels.com/photos/5380642/pexels-photo-5380642.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "ai_abstract": "https://images.unsplash.com/photo-1759178459518-8c2861970e0a?crop=entropy&cs=srgb&fm=jpg&q=85"
+  },
+  "instructions_to_main_agent": [
+    "1. Setup: Install 'lucide-react', 'framer-motion', 'clsx', 'tailwind-merge'.",
+    "2. Config: Update tailwind.config.js to include the custom colors (neon-cyan, deep-navy, etc.) in 'extend'.",
+    "3. Global CSS: Add the custom fonts (Outfit) via @import in index.css.",
+    "4. Component Architecture: Build small UI primitives first (Button, Card, Badge) then assemble sections.",
+    "5. Chatbot: Implement a mock UI for the chatbot first. The actual API integration can be mocked for the UI MVP.",
+    "6. Images: Use the provided URLs. Do not leave any <img> src empty.",
+    "7. Particles: Use 'react-tsparticles' or a simple canvas script for the hero background dots/lines effect."
+  ],
+  "universal_guidelines": [
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy",
+    "Use glass-morphism effects with backdrop filters (12-24px blur)",
+    "You MUST NOT apply universal transition. Eg: transition: all. This results in breaking transforms.",
+    "You MUST NOT center align the app container, ie do not add .App { text-align: center; } in the css file.",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations & color relevant to the app style",
+    "NEVER: use AI assistant Emoji characters for icons.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Subtle grain textures, noise overlays, custom cursors: separates good from extraordinary.",
+    "Components MUST use named exports (export const ComponentName = ...)",
+    "Pages MUST use default exports (export default function PageName() {...})",
+    "All interactive and key informational elements MUST include a data-testid attribute."
+  ]
+}
