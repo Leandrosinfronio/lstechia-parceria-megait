@@ -107,8 +107,11 @@ ENABLE_HEALTH_CHECK=false
 
 ## 8. BACKLOG / PRÓXIMAS FEATURES
 
-### P0 (Crítico)
-- [ ] Push para GitHub (https://github.com/Leandrosinfronio/lstech-osint) — aguardando token do usuário
+- [x] Seção "Parceria Estratégica com a MegaIT" (entre Sobre e Contato) — 21/03/2026
+  - Layout 2 colunas: texto à esquerda, card da MegaIT à direita
+  - Placeholder de logo pronto para substituição
+  - Botão "Fale com nossa equipe" → ancora em #contato
+  - Animações framer-motion consistentes com o restante
 
 ### P1 (Alta prioridade)
 - [ ] Formulário de contato com envio de email (SendGrid/Resend)
