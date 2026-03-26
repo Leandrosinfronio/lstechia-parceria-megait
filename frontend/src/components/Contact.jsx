@@ -59,7 +59,7 @@ export const Contact = () => {
             data-testid="contact-email-display"
           >
             <Mail size={16} className="text-cyan-400" />
-            <span className="text-slate-300 text-sm">contato.leandrosinfronio@gmail.com</span>
+            <span className="text-slate-300 text-sm">leandro@lstechia.com.br</span>
           </div>
           <div
             className="flex items-center gap-3 px-5 py-3 rounded-full"
